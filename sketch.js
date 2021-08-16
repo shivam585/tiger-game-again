@@ -54,7 +54,7 @@ back.scale = 1.3;
   
   ground = createSprite(width/2,height-30,width,50);
   ground.visible=false;
-  ground.addImage("ground",groundImage);
+  ground.addImage(groundImage);
   ground.x = ground.width /2;
   
    gameOver = createSprite(width/2,height/3.5);
