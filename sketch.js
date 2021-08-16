@@ -43,9 +43,7 @@ backimage=loadImage("forestback.jpg")
 function setup() {
   createCanvas(windowWidth,windowHeight);
   
- back=createSprite(width/2,height/2,1000000,100000);
-back.addImage(backimage)
-back.scale = 1.3;
+
   
   trex = createSprite(50,180,20,50);
   trex.addAnimation("running", trex_running);
@@ -97,17 +95,14 @@ function draw() {
     restart.visible = false
     //move the ground
     ground.velocityX = -4;
-    back.velocityX = -4;
+   
     //scoring
     score = score + Math.round(frameCount/60);
     
     if (ground.x < 0){
       ground.x = ground.width/2;
     }
-    
-  if (back.x < 0){
-      back.x = back.width/2;
-    }
+
     
     
     //jump when the space key is pressed
@@ -136,7 +131,7 @@ function draw() {
       restart.visible = true;
      
       ground.velocityX = 0;
-     back.velocityX=0
+ 
       trex.velocityY = 0
      
       //change the trex animation
